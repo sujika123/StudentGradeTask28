@@ -1,0 +1,33 @@
+{% extends 'student/studenthome.html' %}
+{% block content %}
+
+
+<div class="card" style="color:black;width:1000px;">
+  <h3 style="margin-top:20px;margin-left:400px">VIEW GRADE</h3>
+<table class="table">
+  <tr>
+    <th>SI NO</th>
+    <th>Student Name</th>
+    <th>Course</th>
+    <th>Year</th>
+    <th>Semester</th>
+    <th>Grade</th>
+
+  </tr>
+
+  {% for i in data %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{i.student}}</td>
+    <td>{{i.course}}</td>
+    <td>{{i.year}}</td>
+    <td>{{i.semester}}</td>
+    <td>{{i.grade}}</td>
+
+
+  </tr>
+  {% endfor %}
+</table>
+</div>
+
+{% endblock %}

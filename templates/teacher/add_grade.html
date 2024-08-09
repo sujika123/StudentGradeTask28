@@ -1,0 +1,18 @@
+{% extends 'teacher/teacherhome.html' %}
+{% block content %}
+{% load crispy_forms_filters %}
+
+<div class="card" style="width: 500px;height:500px;color:black">
+    <h3 style="margin-top:20px;margin-left:150px">ADD GRADE</h3>
+<form method="post" enctype="multipart/form-data" style="">
+ <div style="margin-left:60px;margin-right:60px;">
+     <br>
+    {% csrf_token %}
+    {{form|crispy}}
+<button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
+</div>
+
+{% endblock %}
+
